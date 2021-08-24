@@ -19,30 +19,30 @@ def trackPrice():
     url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
     json = requests.get(url, params = parameters, headers = headers).json()
     time = datetime.now().strftime("%H:%M:%S") # formatiranje vremena
-    valute = json['data'] # lista sa vrednostima
+    podaci = json['data'] # lista sa vrednostima
 
-    for coin in valute:
+    for valuta in podaci:
     # defninisanje vrednosti za popunjavanje label-a
-        if coin['symbol'] == 'BTC':
-            labelPrice1.config(text = str(coin['name']) + " " + str("{:.2f}".format((coin['quote']['USD']['price']))))
+        if valuta['symbol'] == 'BTC':
+            labelPrice1.config(text = str(valuta['name']) + " " + str("{:.2f}".format((valuta['quote']['USD']['price']))))
 
-        if coin['symbol'] == 'ETH':
-            labelPrice2.config(text = str(coin['name']) + " " + str("{:.2f}".format((coin['quote']['USD']['price']))))
+        if valuta['symbol'] == 'ETH':
+            labelPrice2.config(text = str(valuta['name']) + " " + str("{:.2f}".format((valuta['quote']['USD']['price']))))
 
-        if coin['symbol'] == 'ADA':
-            labelPrice3.config(text = str(coin['name']) + " " + str("{:.2f}".format((coin['quote']['USD']['price']))))
+        if valuta['symbol'] == 'ADA':
+            labelPrice3.config(text = str(valuta['name']) + " " + str("{:.2f}".format((valuta['quote']['USD']['price']))))
 
-        if coin['symbol'] == 'BNB':
-            labelPrice4.config(text = str(coin['name']) + " " + str("{:.2f}".format((coin['quote']['USD']['price']))))
+        if valuta['symbol'] == 'BNB':
+            labelPrice4.config(text = str(valuta['name']) + " " + str("{:.2f}".format((valuta['quote']['USD']['price']))))
 
-        if coin['symbol'] == 'USDT':
-            labelPrice5.config(text = str(coin['name']) + " " + str("{:.2f}".format((coin['quote']['USD']['price']))))
+        if valuta['symbol'] == 'USDT':
+            labelPrice5.config(text = str(valuta['name']) + " " + str("{:.2f}".format((valuta['quote']['USD']['price']))))
 
-        if coin['symbol'] == 'XRP':
-            labelPrice6.config(text = str(coin['name']) + " " + str("{:.2f}".format((coin['quote']['USD']['price']))))  
+        if valuta['symbol'] == 'XRP':
+            labelPrice6.config(text = str(valuta['name']) + " " + str("{:.2f}".format((valuta['quote']['USD']['price']))))  
 
-        if coin['symbol'] == 'DOGE':
-            labelPrice7.config(text = str(coin['name']) + " " + str("{:.2f}".format((coin['quote']['USD']['price']))))
+        if valuta['symbol'] == 'DOGE':
+            labelPrice7.config(text = str(valuta['name']) + " " + str("{:.2f}".format((valuta['quote']['USD']['price']))))
 
         labelTime.config(text = "Last refresh time: " + time) 
 
