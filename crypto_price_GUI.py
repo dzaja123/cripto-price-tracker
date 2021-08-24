@@ -10,7 +10,7 @@ parameters = {
   'convert':'USD'
 }
 headers = {
-  'X-CMC_PRO_API_KEY': '<API KLJUC>', # univerzalni kljuc
+  'X-CMC_PRO_API_KEY': '<<API KLJUC>>', # univerzalni kljuc
   'Accepts': 'application/json'
 }
 
