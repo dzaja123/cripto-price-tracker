@@ -10,7 +10,7 @@ parameters = {
   'convert':'USD'
 }
 headers = {
-  'X-CMC_PRO_API_KEY': '187bfbc6-a53e-45b0-8272-8fa73523fef3', # univerzalni kljuc
+  'X-CMC_PRO_API_KEY': '<API KLJUC>', # univerzalni kljuc
   'Accepts': 'application/json'
 }
 
@@ -54,7 +54,7 @@ root.geometry("700x800") # velicina prozora
 root.title("BTC/ETH price tracker") # ime prozora
 
 # definisanje PNG slike koja je na pozadini glavnog prozora
-filename = tk.PhotoImage(file = "C:\\Users\\Dzaja-PC\\Downloads\\Programski prevodioci\\crypto price tracker\\background.png")
+filename = tk.PhotoImage(file = "C:\\Users\<<PUTANJA DO FOLDERA SA SLIKOM POZADINE>>\\background.png")
 background_label = tk.Label(root, image = filename)
 background_label.place(x = 0, y = 0, relwidth = 1, relheight = 1)
 
